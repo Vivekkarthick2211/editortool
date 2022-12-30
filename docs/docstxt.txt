@@ -1,0 +1,9 @@
+730942266047-j49sji70otmvcmrs3ngvmb8054aqpou2.apps.googleusercontent.com  ---client id
+
+
+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 ---client secret
+
+edittest -- username
+edit@12345 --password
+
+07 2470151811
