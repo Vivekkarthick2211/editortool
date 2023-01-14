@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "ae112a7f-861f-4c41-b8fe-3229b7cbe062",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Reg/Admin Reg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "User2",
+							"type": "default"
+						},
+						{
+							"key": "phone_no",
+							"value": "123456",
+							"type": "default"
+						},
+						{
+							"key": "username",
+							"value": "useruser2",
+							"type": "default"
+						},
+						{
+							"key": "is_staff",
+							"value": "false",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "!@#$%^&*",
+							"type": "default"
+						},
+						{
+							"key": "last_name",
+							"value": "123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginView",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "useruser2",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "!@#$%^&*",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/LoginView/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"LoginView",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categoryinsert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CategoryName",
+							"value": "Birthday",
+							"type": "default"
+						},
+						{
+							"key": "adminId",
+							"value": "5",
+							"type": "default"
+						},
+						{
+							"key": "InfoOfCategory",
+							"value": "This is brthday category",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/adminapi/categoryinsert/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"adminapi",
+						"categoryinsert",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/adminapi/categoryinsert/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"adminapi",
+						"categoryinsert",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload view insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "VideoTemplate",
+							"type": "file",
+							"src": "/C:/Users/VivekKarthickS/Downloads/Bankstatement-1.pdf"
+						},
+						{
+							"key": "CatId",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "AdminId",
+							"value": "5",
+							"type": "default"
+						},
+						{
+							"key": "VideoDetails",
+							"value": "first video",
+							"type": "default"
+						},
+						{
+							"key": "VideoPrice",
+							"value": "1234",
+							"type": "default"
+						},
+						{
+							"key": "offer",
+							"value": "20",
+							"type": "default"
+						},
+						{
+							"key": "Discount",
+							"value": "10.0",
+							"type": "default"
+						},
+						{
+							"key": "Activitystatus",
+							"value": "yes",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/adminapi/adminuploadview/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"adminapi",
+						"adminuploadview",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload video get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/adminapi/adminuploadview/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"adminapi",
+						"adminuploadview",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userHistoryviewPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "UserID",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "Video",
+							"type": "file",
+							"src": "/C:/Users/VivekKarthickS/Downloads/Bankstatement-3.pdf"
+						},
+						{
+							"key": "Category",
+							"value": "brthday",
+							"type": "default"
+						},
+						{
+							"key": "VideoTitle",
+							"value": "blahblAah",
+							"type": "default"
+						},
+						{
+							"key": "sumprice",
+							"value": "123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/userHistoryview/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"userHistoryview",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userhistryview",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/userHistoryview/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"userHistoryview",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "processing_video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "message",
+							"value": "Happy Birthday Instagram",
+							"type": "default"
+						},
+						{
+							"key": "sub_message",
+							"value": "Wishes you a good luck !!",
+							"type": "default"
+						},
+						{
+							"key": "video",
+							"type": "file",
+							"src": "/C:/Users/VivekKarthickS/python/django-examples/files/WhatsApp.mp4"
+						},
+						{
+							"key": "Category",
+							"value": "Birthday",
+							"type": "default"
+						},
+						{
+							"key": "VideoTitle",
+							"value": "Insta's Birthday",
+							"type": "default"
+						},
+						{
+							"key": "sumprice",
+							"value": "1000",
+							"type": "default"
+						},
+						{
+							"key": "userid",
+							"value": "10",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/processingapi/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"processingapi",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
