@@ -63,12 +63,16 @@ class processingvideo(APIView):
 
         text1 = TextClip(request.data['sub_message'], font='SCRIPTIFY',fontsize=75, color='#FF1493')
         foraudioend=video.duration
-        start_time = 0
-        end_time = 5
-        star_another=6
-        end_another=10
-        text = text.set_start(start_time).set_end(end_time).set_pos('center')
-        text1=text1.set_start(end_time).set_end(foraudioend).set_pos('center')
+        positionsarray=request.data['textposstartend'].split(",")
+        # for k in positionsarray:
+        print(positionsarray[0].split("-")[0])
+        start_time=0
+        start_time2 = positionsarray[0].split("-")[0]
+        end_time = positionsarray[0].split("-")[1]
+        star_another=positionsarray[1].split("-")[0]
+        end_another=positionsarray[1].split("-")[1]
+        text = text.set_start(start_time2).set_end(end_time).set_pos('center')
+        text1=text1.set_start(star_another).set_end(end_another).set_pos('center')
         video_with_audio_bg = video.set_audio(AudioFileClip("C:\\Users\\VivekKarthickS\\python\\django-examples\\files\\audio.mpeg"))
         audio_1=video_with_audio_bg.subclip(start_time, start_time + foraudioend)
         video_with_text = CompositeVideoClip([video,audio_1])
@@ -78,11 +82,11 @@ class processingvideo(APIView):
         # Save the new video file
         another_video.write_videofile("C:\\Users\\VivekKarthickS\\python\\django-examples\\editorTool\\output\\"+title+".mp4")
         dictnew={}
-        for key,val in request.data.items():
-            if key=='video':
-                fss = FileSystemStorage()
-                file = fss.save("edit", video)
-                file_url = fss.url(file)
+        # for key,val in request.data.items():
+        #     if key=='video':
+        #         fss = FileSystemStorage()
+        #         file = fss.save("edit", video)
+        #         file_url = fss.url(file)
         # serializer = UserHistorySerializer(data=snippets, many=True)
         return Response({"status":status.HTTP_200_OK,"Message":"Video Processed Successfully !"})
 # import cv2
